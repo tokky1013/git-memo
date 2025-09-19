@@ -60,11 +60,12 @@ GitHubのリモートリポジトリにファイルをアップロードする�
     `git add .`で全ファイルを指定。
 
 8. 追加したファイルをコミット  
-    以下のコマンドを入力すると、インデックスに存在するファイルがローカルリポジトリへ追加される。コミットメッセージは変更内容を伝えるためのメッセージ。
+    以下のコマンドを入力すると、インデックスに存在するファイルがローカルリポジトリへ追加される。  
+    コミットメッセージは変更内容を伝えるためのメッセージ。
     ```
     $ git commit -m "コミットメッセージ"
     ```
-    コミットメッセージを含めた変更履歴（ログ）は、`git log`コマンドで確認  
+    コミットメッセージを含めた変更履歴（ログ）は、`git log`コマンドで確認できる。  
     ```
     $ git log
     commit 6a8e257...コミットハッシュ.....642e3 (HEAD -> master)
@@ -112,4 +113,170 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 ↓  
 `git push origin main`  
 （ブランチを作った場合はmainをブランチ名に変更）  
+</details>
+
+<details><summary>
+
+## Git 基本コマンドまとめ（ChatGPTで生成）
+</summary>
+# Git 基本コマンドまとめ
+
+## 初期設定（最初に一度だけ）
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global init.defaultBranch main
+```
+
+---
+
+## リポジトリの作成・取得
+- 新しいリポジトリを作成  
+```bash
+git init
+```
+
+- 既存リポジトリをクローン  
+```bash
+git clone https://github.com/username/repo.git
+```
+
+---
+
+## ステージング & コミット
+- ファイルをステージング  
+```bash
+git add ファイル名
+```
+
+- すべての変更をステージング  
+```bash
+git add .
+```
+
+- コミット  
+```bash
+git commit -m "メッセージ"
+```
+
+---
+
+## 状態の確認
+- 作業ツリーとステージの状態を確認  
+```bash
+git status
+```
+
+- コミット履歴を見る  
+```bash
+git log
+```
+
+- 1行で履歴を見る  
+```bash
+git log --oneline
+```
+
+---
+
+## リモートリポジトリ操作
+- リモート追加  
+```bash
+git remote add origin https://github.com/username/repo.git
+```
+
+- リモート確認  
+```bash
+git remote -v
+```
+
+- リモートへ push（初回）  
+```bash
+git push -u origin main
+```
+
+- リモートへ push（2回目以降）  
+```bash
+git push
+```
+
+- リモートから pull  
+```bash
+git pull
+```
+
+---
+
+## ブランチ操作
+- ブランチ一覧  
+```bash
+git branch
+```
+
+- 新しいブランチを作成  
+```bash
+git branch ブランチ名
+```
+
+- ブランチを切り替え  
+```bash
+git checkout ブランチ名
+```
+
+- ブランチ作成＆切り替え（まとめて）  
+```bash
+git checkout -b ブランチ名
+```
+
+- ブランチをマージ  
+```bash
+git merge ブランチ名
+```
+
+---
+
+## 変更の取り消し
+- ステージから外す  
+```bash
+git reset HEAD ファイル名
+```
+
+- 変更を破棄（最新版に戻す）  
+```bash
+git checkout -- ファイル名
+```
+
+---
+
+## よく使う便利コマンド
+- 差分を確認  
+```bash
+git diff
+```
+
+- 最新のコミットに上書き（直前の修正）  
+```bash
+git commit --amend
+```
+
+- 履歴付きでファイルを削除  
+```bash
+git rm ファイル名
+```
+
+- ファイル名を変更  
+```bash
+git mv 古い名前 新しい名前
+```
+
+---
+
+## よく使う流れ（例）
+```bash
+git add .
+git commit -m "作業内容"
+git push
+```
+
+
 </details>

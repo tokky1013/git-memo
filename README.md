@@ -21,12 +21,12 @@ GitHubのリモートリポジトリにファイルをアップロードする�
     * ユーザ名
     GitHubアカウントと同じユーザー名を登録
     ```bash
-    $ git config --global user.name ユーザ名
+    $ git config --global user.name "ユーザ名"
     ```
     * メールアドレス
     GitHubアカウントと同じメールアドレスを登録
     ```bash
-    $ git config --global user.email メールアドレス
+    $ git config --global user.email "メールアドレス"
     ```
     
 3. リポジトリを作成  

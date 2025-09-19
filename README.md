@@ -12,7 +12,7 @@ GitHubのリモートリポジトリにファイルをアップロードする�
     Windowsの場合[公式ページ](https://gitforwindows.org/)からインストール。  
     Macの場合は最初からインストールされている。  
     コマンドプロンプト/ターミナルから`git --version`でGitのバージョン情報が表示されることを確認。
-    ```
+    ```bash
     $ git --version
     git version 2.26.2.windows.1
     ```
@@ -20,12 +20,12 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 2. Gitの初期設定  
     * ユーザ名
     GitHubアカウントと同じユーザー名を登録
-    ```
+    ```bash
     $ git config --global user.name ユーザ名
     ```
     * メールアドレス
     GitHubアカウントと同じメールアドレスを登録
-    ```
+    ```bash
     $ git config --global user.email メールアドレス
     ```
     
@@ -34,17 +34,17 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 
 4. クローン  
     プロジェクトのフォルダを作りたいところ（プロジェクトのフォルダの一個上の階層)で以下を実行。
-    ```
+    ```bash
     git clone https://github.com/tokky1013/(プロジェクト名).git
     ```
     例）
-    ```
+    ```bash
     git clone https://github.com/tokky1013/cmd-maze.git
     ```
 
 5. できたフォルダの中に移動  
     例）
-    ```
+    ```bash
     cd cmd-maze
     ```
 
@@ -54,7 +54,7 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 7. インデックスにファイルを追加  
     以下のコマンドでインデックスにファイルを追加する。  
     インデックスとは、コミット前に変更内容を一時的に保存する領域を指し、インデックスに追加されたファイルのみがコミットの対象となる。
-    ```
+    ```bash
     $ git add index.html
     ```
     `git add .`で全ファイルを指定。
@@ -62,11 +62,11 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 8. 追加したファイルをコミット  
     以下のコマンドを入力すると、インデックスに存在するファイルがローカルリポジトリへ追加される。  
     コミットメッセージは変更内容を伝えるためのメッセージ。
-    ```
+    ```bash
     $ git commit -m "コミットメッセージ"
     ```
     コミットメッセージを含めた変更履歴（ログ）は、`git log`コマンドで確認できる。  
-    ```
+    ```bash
     $ git log
     commit 6a8e257...コミットハッシュ.....642e3 (HEAD -> master)
     Author: ユーザ名 <メールアドレス>
@@ -77,12 +77,12 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 
 9. ローカルリポジトリの変更内容をリモートリポジトリに反映  
     以下のコマンドでローカルリポジトリの変更内容をリモートリポジトリに反映させる。
-    ```
+    ```bash
     $ git push origin main
     ```
 
 10. コンフリクトした時  
-    ```sh
+    ```bash
     # ２つのブランチ間でコンフリクトしているファイル fileA.txt と fileB.txt があるとする
 
     # fileA.txt を現在チェックアウトしているブランチ側の対応に合わせる場合
@@ -119,9 +119,8 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 
 ## Git 基本コマンドまとめ（ChatGPTで生成）
 </summary>
-# Git 基本コマンドまとめ
 
-## 初期設定（最初に一度だけ）
+### 初期設定（最初に一度だけ）
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
@@ -130,7 +129,7 @@ git config --global init.defaultBranch main
 
 ---
 
-## リポジトリの作成・取得
+### リポジトリの作成・取得
 - 新しいリポジトリを作成  
 ```bash
 git init
@@ -143,7 +142,7 @@ git clone https://github.com/username/repo.git
 
 ---
 
-## ステージング & コミット
+### ステージング & コミット
 - ファイルをステージング  
 ```bash
 git add ファイル名
@@ -161,7 +160,7 @@ git commit -m "メッセージ"
 
 ---
 
-## 状態の確認
+### 状態の確認
 - 作業ツリーとステージの状態を確認  
 ```bash
 git status
@@ -179,7 +178,7 @@ git log --oneline
 
 ---
 
-## リモートリポジトリ操作
+### リモートリポジトリ操作
 - リモート追加  
 ```bash
 git remote add origin https://github.com/username/repo.git
@@ -207,7 +206,7 @@ git pull
 
 ---
 
-## ブランチ操作
+### ブランチ操作
 - ブランチ一覧  
 ```bash
 git branch
@@ -235,7 +234,7 @@ git merge ブランチ名
 
 ---
 
-## 変更の取り消し
+### 変更の取り消し
 - ステージから外す  
 ```bash
 git reset HEAD ファイル名
@@ -248,7 +247,7 @@ git checkout -- ファイル名
 
 ---
 
-## よく使う便利コマンド
+### よく使う便利コマンド
 - 差分を確認  
 ```bash
 git diff
@@ -271,7 +270,7 @@ git mv 古い名前 新しい名前
 
 ---
 
-## よく使う流れ（例）
+### よく使う流れ（例）
 ```bash
 git add .
 git commit -m "作業内容"

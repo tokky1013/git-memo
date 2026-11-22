@@ -115,6 +115,25 @@ GitHubのリモートリポジトリにファイルをアップロードする�
 （ブランチを作った場合はmainをブランチ名に変更）  
 </details>
 
+
+<details><summary>
+
+## Webページの公開方法
+</summary>
+GithubでWebページを公開する方法
+
+1. visibility を Public にしてリポジトリを作る
+2. 公開したいhtmlファイルをpush
+3. githubでリポジトリを開き、Settings をクリック
+4. Code, planning, and automation の Pages をクリック
+5. Branch で main を選択
+6. Save をクリック
+7. しばらく待ってページをリロードすると、公開したページのリンクが表示される
+    リンクは以下の形式
+    `https://tokky1013.github.io/（プロジェクト名）/`
+
+</details>
+
 <details><summary>
 
 ## Git 基本コマンドまとめ（ChatGPTで生成）

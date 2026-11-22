@@ -128,8 +128,8 @@ GithubでWebページを公開する方法
 4. Code, planning, and automation の Pages をクリック
 5. Branch で main を選択
 6. Save をクリック
-7. しばらく待ってページをリロードすると、公開したページのリンクが表示される 
-    リンクは以下の形式
+7. しばらく待ってページをリロードすると、公開したページのリンクが表示される  
+    リンクは以下の形式  
     `https://tokky1013.github.io/（プロジェクト名）/`
 
 </details>
